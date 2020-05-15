@@ -1,0 +1,368 @@
+body {
+    background: rgb(207, 135, 0);
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+}
+
+input, button {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+.main-div{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    display: none;
+}
+
+.main-div input {
+    display: block;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: white;
+    padding: 15px;
+    outline: none;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+
+.main-div input:focus {
+    border: 1px solid rgb(255, 166, 0);
+}
+
+.main-div button {
+    display: block;
+    background: rgb(255, 81, 0);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    width: 20%;
+    color: white;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+
+.main-div button:hover {
+    background-color: rgb(202, 122, 56);
+    color: black;
+    border: 1px solid black;
+}
+
+#title {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+h3{
+    text-align: center;
+}
+
+#login_icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20%;
+    width: 20%;
+}
+
+.loggedin-div {
+    background-color: white;
+    
+}
+
+div span{
+    font-size: 200%;
+}
+
+div h2 {
+    text-align: center;
+}
+
+#logBtn{
+    display: block;
+    background: rgb(255, 81, 0);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    color: white;
+    font-size: x-large;
+}
+
+
+@media only screen and (max-width: 650px) {
+    #login_div{
+        margin: auto;
+        margin-top: 20%;
+        
+    }
+    #login_icon {
+        width: 40%;
+        height: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-div input,
+    .main-div button {
+        width: 50%;
+      
+    }
+}
+
+/* This is home page in login page */
+a span{
+    font-size: 200%;
+}
+
+#body{
+    text-align: center;
+    padding: 2.5%;
+}
+
+#body2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(207, 135, 0);
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+#lungs {
+    height: 500px;
+    width: 500px;
+    padding-left: 10%;
+    grid-row: 1/ span 2;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#list{
+    font-size: x-large;
+}
+
+#title{
+    margin-top: 15%;
+}
+
+#aboutGame {
+    padding-right: 10%;
+    padding-left: 5%;
+}
+
+#whyPlay {
+    padding-left: 10%;
+    padding-left: 5%;
+}
+#body3 {
+    text-align: center;
+    padding: 2.5%;
+    margin-top: 1%;
+}
+
+#gamePlay {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+#gamePlay1,
+#gamePlay2,
+#gamePlay3 {
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#gamePlay1{
+    grid-column: 1 / span 2;
+    padding-bottom: 2.5%;
+}
+
+#welcome_user{
+    margin-bottom: 2.5%;
+}
+
+@media only screen and (max-width: 650px) {
+    #body2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        background-color: rgb(207, 135, 0);
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+    }
+    #lungs {
+        height: 150px;
+        width: 150px;
+        padding-left: 0%;
+        grid-row: 1/ span 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #aboutGame{
+        text-align: center;
+        padding-left: 10%;
+    }
+    #whyPlay {
+        text-align: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #list{
+        font-size: large;
+        text-align: left;
+    }
+    #gamePlay {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 5%;
+    }
+    #gamePlay1{
+        grid-column: 1/ span 1;
+
+    }
+    
+    #gamePlay1,
+    #gamePlay2,
+    #gamePlay3 {
+    width: 260px;
+    height: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5%;
+    }
+}
+
+
+/* This is for about us in login page */
+a span{
+    font-size: 200%;
+}
+
+#body{
+    text-align: center;
+    padding: 2.5%;
+    margin-top: 5%;
+}
+
+#profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding-top: 5%;
+}
+ 
+#johnny2, 
+#max, 
+#brennen2, 
+#lim {
+    padding: 10%;
+    background-color: rgb(207, 135, 0);
+    font-size: x-large;
+}
+
+#johnny,
+#max2,
+#brennen,
+#lim2 {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#johnnypic,
+#maxpic,
+#brennenpic,
+#limpic {
+    width: 300px;
+    height: 300px;
+    
+}
+@media only screen and (max-width: 650px) {
+    #profile {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 500px auto;
+        padding-top: 5%;
+        grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six"
+        "seven"
+        "eight";
+    }
+    #max2 {
+        grid-area: three;
+    }
+    #lim2 {
+        grid-area: seven;
+    }
+    #max2,
+    #brennen,
+    #lim2 {
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+    #johhny {
+        margin-top: 10%;
+    }
+    #brennen, 
+    #lim2 {
+        margin-bottom: 5%;
+    }
+}
+
+/* This is for leaderboard in login page */
+#lt {
+    top: 60%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    text-align: center;
+    border-style: ridge;
+}
+
+#one,
+#two,
+#three,
+#four,
+#five {
+    font-size: 40px;
+}
+
+#fs {
+    font-size: 20px;
+}
+
+#lm {
+    text-align: center;
+    font-size: 60px;
+    border-radius: 25px;
+    background: rgb(207, 135, 0);
+    padding: 20px;
+}
+
+#btn2 {
+    width: 150px;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+}
