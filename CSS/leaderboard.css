@@ -1,0 +1,266 @@
+@media (min-width: 1024px) {
+#lt {
+    font-family: 'Jura', sans-serif;
+    width: 85%;
+    height: auto;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 15%;
+}
+
+#one,
+#two,
+#three,
+#four,
+#five,
+#six,
+#seven,
+#eight {
+    font-size: 40px;
+    height: 120px;
+}
+
+#one {
+    background-color: gold;
+}
+
+#two {
+    background-color: silver;
+}
+
+#three {
+    background-color: #d66a33;
+}
+
+#four, #five, #six, #seven, #eight {
+    background-color: #faf5f5;
+}
+
+.sections {
+    border-collapse:separate;
+    border-spacing:0 10px;
+}
+
+#btn {
+    font-size: 30px;
+    width: 200px;
+    background-color: cornflowerblue;
+}
+
+#fs {
+    font-size: 20px;
+}
+
+#navtitle {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#lm {
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 25px;
+    background: #ff8000;
+    width: 400px;
+    height: 120px;
+    top: 280%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 0px;
+}
+
+#btn2 {
+    width: 150px;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+}
+
+#blank {
+    height: 50px;
+}
+
+#navtitle > #trophy {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#btn4 {
+    position: relative;
+    padding: 0;
+    border: none;
+    background: none;
+    left: 80%;
+}
+
+
+#btn3 {
+    position: relative;
+    padding: 0;
+    border: none;
+    background: none;
+    left: 80%;
+}
+
+}
+
+
+@media (max-width: 500px) {
+
+main {
+    display: grid;
+    grid-template-areas:
+    "#navtitle #navtitle #navtitle"
+    "#lt #lt #lt";
+}
+    #lt {
+        position: relative;
+        font-family: 'Jura', sans-serif;
+        width: 90%;
+        height: auto;
+        top: -5%;
+        left: 45%;
+        transform: translate(-50%, -100%);
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    #one,
+    #two,
+    #three,
+    #four,
+    #five,
+    #six,
+    #seven,
+    #eight
+     {
+        font-size: 15px;
+        height: auto;
+    }
+    
+    #one {
+        background-color: gold;
+    }
+    
+    #two {
+        background-color: silver;
+    }
+    
+    #three {
+        background-color: #d66a33;
+    }
+    
+    #four, #five, #six, #seven, #eight {
+        background-color: #faf5f5;
+    }
+    
+    .sections {
+        border-collapse:separate;
+        border-spacing:0 10px;
+    }
+    
+    #btn {
+        font-size: 10px;
+        width: 100vw;
+        background-color: cornflowerblue;
+    }
+    
+    #fs {
+        font-size: 10px;
+    }
+    
+    #navtitle {
+        display: grid;
+        grid-column-gap: 3em;
+        position: relative;
+        width: 150vw;
+        height: 50vh;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #lm {
+        vertical-align: middle;
+        position: relative;
+        font-family: 'Orbitron', sans-serif;
+        text-align: center;
+        font-size: 85%;
+        border-radius: 10px;
+        background: #ff8000;
+        width: 30%;
+        height: 10%;
+        top: 35vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+    
+    #btn2 {
+        width: 75vw;
+        height: auto;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: cornflowerblue;
+    }
+    
+    #blank {
+        height: 30px;
+    }
+    
+    #navtitle {
+        position: relative;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #navtitle > #trophy {
+        vertical-align: middle;
+        width: 30%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #btn4 {
+        position: relative;
+        width: 10%;
+        left: 75%;
+        padding: 0;
+        border: none;
+        background: none;
+
+    }
+    
+    #btnas {
+        display: grid;
+        grid-template-areas: 
+        "#btn3 #btn3"
+        "#btn4 #btn4"
+    }
+    #btn3 {
+        position: relative;
+        width: 10%;
+        left: 75%;
+        bottom: 15%;
+        padding: 0;
+        border: none;
+        background: none;
+    }
+}

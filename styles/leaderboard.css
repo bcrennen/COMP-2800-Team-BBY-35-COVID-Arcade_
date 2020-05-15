@@ -4,7 +4,7 @@
     left: 50%;
     width: 60%;
     height: 60%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     text-align: center;
     border-style: ridge;
 }
@@ -38,7 +38,7 @@
     height: auto;
     top: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
 }
 
 #btn2 {
