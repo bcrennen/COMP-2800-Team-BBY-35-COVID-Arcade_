@@ -7,70 +7,49 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="styles/leaderboard.css">
+    <link rel="stylesheet" href="CSS/leaderboard.css">
 
     <!-- for favicon -->
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
     <link rel="icon" href="image/favicon.ico" type="image/x-icon">
 </head>
 
-<body>
-    <!-- <input type="text" id="name">
-    <input type="text" id="score">
-    <input type="text" id="password">
-    <button type="button" id="button" onclick="addLead()">Submit</button> -->
-<div id="leader-board">
-    <div id="lm">
-        Leaderboard
+<body style="background-image: url('img/blue.png'); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
+    <div id="lds">
+        <div id="navtitle">
+            <img id="trophy" src="image/purple.png">
+            <div id="lm" style="background-color: #591778; color: white;">
+                Mini-games <br> Leaderboards
+            </div>
+        </div>
+        <div class="boards2">
+            <a href="Joggerleaderboard.html">
+                <div id="jogger">
+                    Jogger Leaderboard
+                </div>
+            </a>
+
+            <a href="dfld.html">
+                <div id="dogfight">
+                    DogFight Leaderboard
+                </div>
+            </a>
+
+            <a href="tpracelead.html">
+                <div id="tprace">
+                    Toilet Paper Race Leaderboard
+                </div>
+            </a>
+
+            <a href="touch.html">
+                <div id="tfgame">
+                    Don't touch face Leaderboard
+                </div>
+            </a>
+        </div>
     </div>
-
-    <input type="button" value="Back" id="btn2" class="btn btn-secondary" data-dismiss="modal" onclick="window.location.href='index.html'">
-    <div id="lt" class="container">
-        <table class="table table-condensed">
-            <thead>
-                <tr id="fs">
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr id=one>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr id=two>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr id=three>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr id=four>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr id=five>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <input type="button" value="Share it!" id="btn" class="btn btn-secondary" data-dismiss="modal" onclick="Copy()">
-    </div>
-</div>
 </body>
-<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
-<script src="scripts/firebase_api_brennen.js"></script>
-<script src="scripts/Practice.js"></script>
 
 </html>

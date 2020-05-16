@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blitzmode_leaderboard of Covid-Arcade</title>
+    <title>Touch face game_leaderboard of Covid-Arcade</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -17,15 +17,12 @@
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
     <link rel="icon" href="image/favicon.ico" type="image/x-icon">
 
-    <style>
-        #blitzlead {
-            background-image: url('image/back.jpg');
-        }
-    </style>
 </head>
 
-<body>
-    <div id="blitzlead">
+<body style="background-image: url('img/orange.jpg'); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
+
     <div id="btnas">
         <div id="blank"></div>
         <button id="btn3" class="fb-share-button"
@@ -42,9 +39,9 @@
     </div>
 
     <div id="navtitle">
-        <img id="trophy" src="image/purple.png">
-        <div id="lm" style="background-color: #591778; color: white;">
-            Blitz mode <br> Leaderboard
+        <img id="trophy" src="image/Trophy.png">
+        <div id="lm">
+            Don't touch face game <br> Leaderboard
         </div>
     </div>
 
@@ -52,10 +49,10 @@
         <div id="blank"></div>
         <table class="table table-condensed sections">
             <thead>
-                <tr id="fs" style="color: white;">
+                <tr id="fs">
                     <th>Rank</th>
                     <th>User email</th>
-                    <th>Time</th>
+                    <th>Score</th>
                 </tr>
             </thead>
             <tbody>
@@ -78,11 +75,10 @@
             </tbody>
         </table>
     </div>
-</div>
 </body>
 <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="scripts/firebase_api_brennen.js"></script>
-<script src="scripts/blitzz.js"></script>
+<script src="scripts/touch.js"></script>
 
 </html>
