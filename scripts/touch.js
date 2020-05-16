@@ -11,7 +11,7 @@ var numbers = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"];
 // sort data by high scores
 leadsRef.on('child_added', function (childSnapshot) {
     const childData = childSnapshot.val();
-    var scoredata = childData.tpRaceTime;
+    var scoredata = childData.tfScore;
     var namedata = childData.userName;
     userCounts[namedata] = scoredata;
 
