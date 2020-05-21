@@ -29,7 +29,7 @@ leadsRef.on('child_added', function (childSnapshot) {
             }
         }
         sortable.sort(function (a, b) {
-            return b[1] - a[1];
+            return a[1] - b[1];
         });
         var objSorted = {}
         sortable.forEach(function (item) {
