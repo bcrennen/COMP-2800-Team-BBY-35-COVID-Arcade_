@@ -38,7 +38,7 @@ leadsRef.on('child_added', function (childSnapshot) {
 
         // arraylist.length > how many times array run
 
-        if (sortable.length >= 5) {
+        if (sortable.length >= 7) {
             var firstvalue = sortable[0];
             var secondvalue = sortable[1];
             var thirdvalue = sortable[2];
