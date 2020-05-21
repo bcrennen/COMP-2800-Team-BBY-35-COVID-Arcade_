@@ -12,7 +12,8 @@
 #dogfight2,
 #tprace2,
 #tfgame2,
-#ccld2 {
+#ccld2,
+#blitz2 {
     background-image: url('../img/back.jpg');
     text-align: center;
     font-family: 'Jura', sans-serif;
@@ -47,7 +48,8 @@
     #dogfight2,
     #tprace2,
     #tfgame2,
-    #ccld2 {
+    #ccld2,
+    #blitz2 {
         font-size: large;
         margin: 5%;
     }
