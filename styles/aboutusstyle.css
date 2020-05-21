@@ -1,0 +1,81 @@
+a span{
+    font-size: 200%;
+}
+
+#body{
+    text-align: center;
+    padding: 2.5%;
+    margin-top: 5%;
+}
+
+#profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding-top: 5%;
+}
+ 
+#johnny2, 
+#max, 
+#brennen2, 
+#lim {
+    padding: 10%;
+    background-color: rgb(207, 135, 0);
+    font-size: x-large;
+}
+
+#johnny,
+#max2,
+#brennen,
+#lim2 {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#johnnypic,
+#maxpic,
+#brennenpic,
+#limpic {
+    width: 300px;
+    height: 300px;
+    
+}
+
+@media only screen and (max-width: 650px) {
+    #profile {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 500px auto;
+        padding-top: 5%;
+        grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six"
+        "seven"
+        "eight";
+    }
+    #max2 {
+        grid-area: three;
+    }
+    #lim2 {
+        grid-area: seven;
+    }
+    #max2,
+    #brennen,
+    #lim2 {
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+    #johhny {
+        margin-top: 10%;
+    }
+    #brennen, 
+    #lim2 {
+        margin-bottom: 5%;
+    }
+}
+

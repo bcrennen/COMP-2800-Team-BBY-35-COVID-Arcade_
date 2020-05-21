@@ -1,0 +1,108 @@
+a span{
+    font-size: 200%;
+}
+
+#body{
+    text-align: center;
+    padding: 2.5%;
+    margin-top: 1%;
+}
+
+#body2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(207, 135, 0);
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+#lungs {
+    height: 500px;
+    width: 500px;
+    padding-left: 10%;
+    grid-row: 1/ span 2;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#list{
+    font-size: x-large;
+}
+
+#title{
+    margin-top: 15%;
+}
+
+#aboutGame {
+    padding-right: 10%;
+    padding-left: 5%;
+}
+
+#whyPlay {
+    padding-left: 10%;
+    padding-left: 5%;
+}
+#body3 {
+    text-align: center;
+    padding: 2.5%;
+    margin-top: 1%;
+}
+
+#gamePlay {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#gamePlay1,
+#gamePlay2,
+#gamePlay3 {
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 650px) {
+    #body2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        background-color: rgb(207, 135, 0);
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+    }
+    #lungs {
+        height: 150px;
+        width: 150px;
+        padding-left: 0%;
+        grid-row: 1/ span 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #aboutGame{
+        text-align: center;
+        padding-left: 10%;
+    }
+    #whyPlay {
+        text-align: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #list{
+        font-size: large;
+        text-align: left;
+    }
+    #gamePlay {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #gamePlay1,
+    #gamePlay2,
+    #gamePlay3 {
+    width: 260px;
+    height: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5%;
+}
+}
