@@ -2,13 +2,12 @@
 // put data into firebase
 var database = firebase.database();
 
-// retrive data F
+// retrieve data from Firebase
 var leadsRef = database.ref('UsersId');
 var userCounts = {};
 var numbers = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"];
 
 
-// sort data by high scores
 leadsRef.on('child_added', function (childSnapshot) {
     const childData = childSnapshot.val();
     var scoredata = childData.tpRaceTime;
@@ -22,12 +21,15 @@ leadsRef.on('child_added', function (childSnapshot) {
             sortable.push([datas, userCounts[datas]]);
         }
 
+        // if data is undefined, the array value is replaced by next value
         for (var ni = 0; ni < sortable.length; ni++) {
             var dataoo = sortable[ni];
-            if (dataoo[Object.keys(dataoo)[1]] === undefined) {
+            if (dataoo[Object.keys(dataoo)[1]] === undefined || dataoo[Object.keys(dataoo)[1]] <= 0) {
                 sortable.splice(ni, 1); ni--;
             }
         }
+
+        // sort in ascending order
         sortable.sort(function (a, b) {
             return a[1] - b[1];
         });
@@ -56,9 +58,7 @@ leadsRef.on('child_added', function (childSnapshot) {
 
             var name_value3 = thirdvalue[Object.keys(thirdvalue)[0]];
             var score_value3 = thirdvalue[Object.keys(thirdvalue)[1]];
-            console.log(name_value3);
-            console.log(score_value3);
-
+            
             var name_value4 = fourthvalue[Object.keys(fourthvalue)[0]];
             var score_value4 = fourthvalue[Object.keys(fourthvalue)[1]];
 

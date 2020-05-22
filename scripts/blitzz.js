@@ -75,25 +75,25 @@ leadsRef.on('child_added', function (childSnapshot) {
             // var score_value8 = eighthvalue[Object.keys(eighthvalue)[1]];
 
             let tr1 = document.getElementById('one');
-            tr1.innerHTML = "<td>" + numbers[0] + "<td>" + name_value1 + "<td>" + score_value1 + " sec";
+            tr1.innerHTML = "<td>" + numbers[0] + "<td>" + name_value1 + "<td>" + score_value1 + " lvl";
 
             let tr2 = document.getElementById('two');
-            tr2.innerHTML = "<td>" + numbers[1] + "<td>" + name_value2 + "<td>" + score_value2 + " sec";
+            tr2.innerHTML = "<td>" + numbers[1] + "<td>" + name_value2 + "<td>" + score_value2 + " lvl";
 
             let tr3 = document.getElementById('three');
-            tr3.innerHTML = "<td>" + numbers[2] + "<td>" + name_value3 + "<td>" + score_value3 + " sec";
+            tr3.innerHTML = "<td>" + numbers[2] + "<td>" + name_value3 + "<td>" + score_value3 + " lvl";
 
             let tr4 = document.getElementById('four');
-            tr4.innerHTML = "<td>" + numbers[3] + "<td>" + name_value4 + "<td>" + score_value4 + " sec";
+            tr4.innerHTML = "<td>" + numbers[3] + "<td>" + name_value4 + "<td>" + score_value4 + " lvl";
 
             let tr5 = document.getElementById('five');
-            tr5.innerHTML = "<td>" + numbers[4] + "<td>" + name_value5 + "<td>" + score_value5 + " sec";
+            tr5.innerHTML = "<td>" + numbers[4] + "<td>" + name_value5 + "<td>" + score_value5 + " lvl";
 
             let tr6 = document.getElementById('six');
-            tr6.innerHTML = "<td>" + numbers[5] + "<td>" + name_value6 + "<td>" + score_value6 + " sec";
+            tr6.innerHTML = "<td>" + numbers[5] + "<td>" + name_value6 + "<td>" + score_value6 + " lvl";
 
             let tr7 = document.getElementById('seven');
-            tr7.innerHTML = "<td>" + numbers[6] + "<td>" + name_value7 + "<td>" + score_value7 + " sec";
+            tr7.innerHTML = "<td>" + numbers[6] + "<td>" + name_value7 + "<td>" + score_value7 + " lvl";
 
             // let tr8 = document.getElementById('eight');
             // tr8.innerHTML = "<td>" + numbers[7] + "<td>" + name_value8 + "<td>" + score_value8;
