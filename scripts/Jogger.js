@@ -2,13 +2,13 @@
 // put data into firebase
 var database = firebase.database();
 
-// retrive data F
+// Global variables
 var leadsRef = database.ref('UsersId');
 var userCounts = {};
 var numbers = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"];
 
 
-// sort data by high scores
+// retrieve data from Firebase
 leadsRef.on('child_added', function (childSnapshot) {
     const childData = childSnapshot.val();
     var scoredata = childData.joggerScore;
@@ -22,12 +22,15 @@ leadsRef.on('child_added', function (childSnapshot) {
             sortable.push([datas, userCounts[datas]]);
         }
 
+        // if data is undefined, the array value is replaced by next value
         for (var ni = 0; ni < sortable.length; ni++) {
             var dataoo = sortable[ni];
             if (dataoo[Object.keys(dataoo)[1]] === undefined) {
                 sortable.splice(ni, 1); ni--;
             }
         }
+
+        // sort in descending order
         sortable.sort(function (a, b) {
             return b[1] - a[1];
         });
@@ -36,7 +39,6 @@ leadsRef.on('child_added', function (childSnapshot) {
             objSorted[item[0]] = item[1]
         })
 
-        // make visible data into html
         if (sortable.length >= 5) {
             var firstvalue = sortable[0];
             var secondvalue = sortable[1];
@@ -45,9 +47,8 @@ leadsRef.on('child_added', function (childSnapshot) {
             var fivththvalue = sortable[4];
             var sixththvalue = sortable[5];
             var sevenththvalue = sortable[6];
-            // var eighthvalue = sortable[7];
 
-
+            // Name value and score value for leaderboard
             var name_value1 = firstvalue[Object.keys(firstvalue)[0]];
             var score_value1 = firstvalue[Object.keys(firstvalue)[1]];
 
@@ -56,8 +57,6 @@ leadsRef.on('child_added', function (childSnapshot) {
 
             var name_value3 = thirdvalue[Object.keys(thirdvalue)[0]];
             var score_value3 = thirdvalue[Object.keys(thirdvalue)[1]];
-            console.log(name_value3);
-            console.log(score_value3);
 
             var name_value4 = fourthvalue[Object.keys(fourthvalue)[0]];
             var score_value4 = fourthvalue[Object.keys(fourthvalue)[1]];
@@ -71,9 +70,7 @@ leadsRef.on('child_added', function (childSnapshot) {
             var name_value7 = sevenththvalue[Object.keys(sevenththvalue)[0]];
             var score_value7 = sevenththvalue[Object.keys(sevenththvalue)[1]];
 
-            // var name_value8 = eighthvalue[Object.keys(eighthvalue)[0]];
-            // var score_value8 = eighthvalue[Object.keys(eighthvalue)[1]];
-
+            // make visible data into html
             let tr1 = document.getElementById('one');
             tr1.innerHTML = "<td>" + numbers[0] + "<td>" + name_value1 + "<td>" + score_value1;
 

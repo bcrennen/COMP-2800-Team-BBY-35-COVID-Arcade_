@@ -71,9 +71,6 @@ leadsRef.on('child_added', function (childSnapshot) {
             var name_value7 = sevenththvalue[Object.keys(sevenththvalue)[0]];
             var score_value7 = sevenththvalue[Object.keys(sevenththvalue)[1]];
 
-            // var name_value8 = eighthvalue[Object.keys(eighthvalue)[0]];
-            // var score_value8 = eighthvalue[Object.keys(eighthvalue)[1]];
-
             let tr1 = document.getElementById('one');
             tr1.innerHTML = "<td>" + numbers[0] + "<td>" + name_value1 + "<td>" + score_value1;
 
@@ -94,9 +91,6 @@ leadsRef.on('child_added', function (childSnapshot) {
 
             let tr7 = document.getElementById('seven');
             tr7.innerHTML = "<td>" + numbers[6] + "<td>" + name_value7 + "<td>" + score_value7;
-
-            // let tr8 = document.getElementById('eight');
-            // tr8.innerHTML = "<td>" + numbers[7] + "<td>" + name_value8 + "<td>" + score_value8;
         }
     }
 });

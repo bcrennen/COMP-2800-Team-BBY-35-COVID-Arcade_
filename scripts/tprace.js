@@ -38,7 +38,7 @@ leadsRef.on('child_added', function (childSnapshot) {
             objSorted[item[0]] = item[1]
         })
 
-        // make visible data into html
+        //
         if (sortable.length >= 7) {
             var firstvalue = sortable[0];
             var secondvalue = sortable[1];
@@ -47,7 +47,6 @@ leadsRef.on('child_added', function (childSnapshot) {
             var fivththvalue = sortable[4];
             var sixththvalue = sortable[5];
             var sevenththvalue = sortable[6];
-            // var eighthvalue = sortable[7];
 
 
             var name_value1 = firstvalue[Object.keys(firstvalue)[0]];
@@ -71,9 +70,7 @@ leadsRef.on('child_added', function (childSnapshot) {
             var name_value7 = sevenththvalue[Object.keys(sevenththvalue)[0]];
             var score_value7 = sevenththvalue[Object.keys(sevenththvalue)[1]];
 
-            // var name_value8 = eighthvalue[Object.keys(eighthvalue)[0]];
-            // var score_value8 = eighthvalue[Object.keys(eighthvalue)[1]];
-
+            // make visible data into html
             let tr1 = document.getElementById('one');
             tr1.innerHTML = "<td>" + numbers[0] + "<td>" + name_value1 + "<td>" + score_value1 + " sec";
 
@@ -94,9 +91,6 @@ leadsRef.on('child_added', function (childSnapshot) {
 
             let tr7 = document.getElementById('seven');
             tr7.innerHTML = "<td>" + numbers[6] + "<td>" + name_value7 + "<td>" + score_value7 + " sec";
-
-            // let tr8 = document.getElementById('eight');
-            // tr8.innerHTML = "<td>" + numbers[7] + "<td>" + name_value8 + "<td>" + score_value8;
         }
     }
 });
