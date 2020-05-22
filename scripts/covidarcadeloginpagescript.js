@@ -15,7 +15,6 @@ firebase.auth().onAuthStateChanged(function(user) {
         console.log(uid_id);
 
         var firebaseRef = database.ref('UsersId/' + uid_id);
-        // firebaseRef.child("Users Id").set(uid_id);
         firebaseRef.set({
           userName: email_id
         });
