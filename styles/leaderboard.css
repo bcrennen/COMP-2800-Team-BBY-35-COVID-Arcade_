@@ -1,0 +1,51 @@
+#lt {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    /* transform: translate(-50%, -50%); */
+    text-align: center;
+    border-style: ridge;
+}
+
+#one,
+#two,
+#three,
+#four,
+#five {
+    font-size: 40px;
+}
+
+#btn {
+    font-size: 30px;
+    width: 200px;
+    background-color: cornflowerblue;
+}
+
+#fs {
+    font-size: 20px;
+}
+
+#lm {
+    position: absolute;
+    text-align: center;
+    font-size: 60px;
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px;
+    width: 500px;
+    height: auto;
+    top: 10%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+}
+
+#btn2 {
+    width: 150px;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+}

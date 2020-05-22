@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>COVID Arcade Login</title>
+
+
+    <!----------------------------------------------->
+    <!--  Meta tag for rendering on mobile devices -->
+    <!----------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!----------------------------------------------->
+    <!-- CSS: Bootstrap, Firebase, other API -->
+    <!----------------------------------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js%22%3E"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js%22%3E"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+    <!------------------------>
+    <!-- Your own CSS files -->
+    <!------------------------>
+    <link rel="stylesheet" href="styles/covidarcadeloginpagestyle.css">
+    <link rel="stylesheet" href="CSS/leaderboard.css">
+    <link rel="stylesheet" href="CSS/leaderboardlogin.css">
+
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body style="background-image: url('img/orange.jpg'); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; font-family: 'Balsamiq Sans', cursive;">
+    <!----------------------->
+    <!--  HTML Section -->
+    <!----------------------->
+    <div id="firebaseui-auth-container"></div>
+
+
+    <div id="login_div" class="main-div">
+        <img id="login_icon" src="img/loginicon.png" alt="Login Icon">
+        <h3>User Login</h3>
+        <input type="email" placeholder="Email..." id="email_field">
+        <input type="password" placeholder="Password..." id="password_field">
+        <div id="buttons">
+            <button id="login_btn" onclick="login()">Login</button>
+            <button id="signup_btn" onclick="signup()">Sign Up</button>
+            <button id="back_btn" onclick="backHome()">Go Back</button>
+        </div>
+    </div>
+
+    <div id="user_div" class="loggedin-div">
+        <div class="container">
+            <div>
+                <img src="./img/covid3.png" width="60" height="60" alt="hello">
+                <span>Covid Arcade</span>
+            </div>
+            <div id="welcome_user">
+                <h2>Hello and Welcome!</h2>
+                <h3 id="user_para"></h3>
+                <button id="logBtn" onclick="logout()">Logout</button>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                <li><a data-toggle="tab" href="#menu1">About us</a></li>
+                <li><a data-toggle="tab" href="#menu2">Leaderboards</a></li>
+                <li><a data-toggle="tab" href="#menu3">Play Game</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <div id="body">
+                        <h1>Have fun and stay safe!</h1>
+                        <p>SignUp now to enjoy arcade games.</p>
+                    </div>
+
+                    <div id="body2">
+                        <img src="./img/preventation.jpg" alt="Preventation" id="lungs">
+                        <div id="aboutGame">
+                            <h2>About the Game</h2>
+                            <p>This is a back-to-back mini game similar to WarioWare. The main focus is on quarantine
+                                activities that slowly build up the diffculty as you play.
+                                Many users keep coming back to our game becasue of the competitiveness this game has to
+                                offers.</P>
+                        </div>
+
+                        <div id="whyPlay">
+                            <h2 id="title" style="font-family: 'Balsamiq Sans', cursive;">Why play this game?</h2>
+                            <ul id="list">
+                                <li>Learning ways to prevent infections.</li>
+                                <li>Being hygienic during a pandemic.</li>
+                                <li>Applying in-game knowledge with the real world.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="body3">
+                        <h2>Gameplay Demo</h2>
+                        <p>Please enjoy our brief gameplays of what this game offers!</p>
+                        <div id="gamePlay">
+                            <img src="./img/thejogger.gif" alt="Covid_Gameplay" id="gamePlay1">
+                            <img src="./img/disinfectdogfight.gif" alt="Covid_Gameplay" id="gamePlay2">
+                            <img src="./img/tprace.gif" alt="Covid_Gameplay" id="gamePlay3">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="menu1" class="tab-pane fade">
+                    <div id="body">
+                        <h1>A little about US!</h1>
+                    </div>
+                    <div id="profile">
+
+                        <div id="johnny">
+                            <h3>Johnny</h3>
+                            <img id="johnnypic" src="./img/johnny.png">
+                        </div>
+                        <div id="johnny2">
+                            <p>I’ve been fascinated by game design ever since my older brother introduced
+                                me to Scratch when I was 8. Since then the desire to design and develop
+                                games has never subsided. Working together with my team members on this
+                                project has been a dream come true for me. It has forced me to script in
+                                a way that makes it easier for my team members to read and in turn has made
+                                me a better, more efficient coder.</p>
+                        </div>
+
+                        <div id="max">
+                            <p>I have had a great time developing Covid Arcade with this team.
+                                My goal is to become a Game Designer so It has been very beneficial
+                                to my learning to have a project based around C# and Unity. Furthermore,
+                                working on this project has improved my teamwork and time-management skills.
+                                I’m glad to be working on a project that is so conscious of the pandemic
+                                and am proud of what we have done and hope to do more.</p>
+                        </div>
+                        <div id="max2">
+                            <h3>Max</h3>
+                            <img id="maxpic" src="./img/max.png">
+                        </div>
+
+                        <div id="brennen">
+                            <h3>Brennen</h3>
+                            <img id="brennenpic" src="./img/brennen.jpg">
+                        </div>
+                        <div id="brennen2">
+                            <p>Hello everyone, hope you are having a great time looking through our website,
+                                Covid Arcade. This project was really fun and enjoyable working with Johnny,
+                                Max and Lim. I do not have much experience in coding, but I will continue to
+                                make enjoyable web pages like this for everyone. My goal is to become a web
+                                developer so the task I have done for this project would definitely help me
+                                in the near future. Furthermore, this project has helped me to become a better
+                                team player as well as management my time skill.</p>
+                        </div>
+
+                        <div id="lim">
+                            <p>I recently finished my first semester of computer system technology. And it
+                                was fun to team up with Brennen, Max, and Johnny and to do a mini-game project
+                                with the team members. For this project, I've been working on databases because
+                                I'm interested in managing databases and cloud computing platforms. This kind of
+                                work can help me improve my database skills. Furthermore, I can improve my time
+                                management and teamwork, not only coding skills.</p>
+                        </div>
+                        <div id="lim2">
+                            <h3>Lim</h3>
+                            <img id="limpic" src="./img/lim.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="menu2" class="tab-pane fade">
+                    <div id="navtitle">
+                        <img id="trophy" src="image/purple.png">
+                        <div id="lm" style="background-color: #591778; color: white;">
+                            Mini-games <br> Leaderboards
+                        </div>
+                    </div>
+                    <div class="boards">
+                        <a href="blitzmode.html">
+                            <div id="blitz2">
+                                Blitz Mode <br> Leaderboard
+                            </div>
+                        </a>
+
+
+                        <a href="Joggerleaderboard.html">
+                            <div id="jogger2">
+                                Jogger <br> Leaderboard
+                            </div>
+                        </a>
+
+                        <a href="dfld.html">
+                            <div id="dogfight2">
+                                DogFight <br> Leaderboard
+                            </div>
+                        </a>
+
+                        <a href="tpracelead.html">
+                            <div id="tprace2">
+                                Toilet Paper Race <br> Leaderboard
+                            </div>
+                        </a>
+
+                        <a href="touch.html">
+                            <div id="tfgame2">
+                                Don't touch face <br> Leaderboard
+                            </div>
+                        </a>
+
+                        <a href="ccld.html">
+                            <div id="ccld2">
+                                Cough Catcher <br> Leaderboard
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="menu3" class="tab-pane fade">
+                    <h3>Welcome to Covid Arcade!</h3>
+                    <p id="disable">Please download our app from the mobile device to play our game.</p>
+                    <iframe src="https://simmer.io/@Tippy/covid-arcade" id="playGame" width="100%" height="750"
+                        style="border:none;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="scripts/firebase_api_brennen.js"></script>
+
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+    <script src="scripts/covidarcadeloginpagescript.js"></script>
+
+
+    <!--------------------------------------------------------------------->
+    <!-- Make calls to your own JavaScript functions, here below-->
+    <!---------------------------------------------------------------------->
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+
+</html>

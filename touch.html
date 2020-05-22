@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch face game_leaderboard of Covid-Arcade</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="CSS/leaderboard.css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap" rel="stylesheet">
+
+    <!-- for favicon -->
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body style="background-image: url('img/orange.jpg'); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
+
+    <div id="btnas">
+        <div id="blank"></div>
+        <button id="btn3" class="fb-share-button"
+            data-href="https://slim01.blob.core.windows.net/project2800/touch.html" data-layout="button"
+            data-size="large"><a
+                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+                data-text="Click this link and see who is the winner of Covid-Arcade!"
+                class="fb-xfbml-parse-ignore">Share on Facebook</a>
+        </button>
+        <button id="btn4"> <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                data-size="large" data-text="Click this link and see who is the winner of Covid-Arcade!"
+                data-url="https://slim01.blob.core.windows.net/project2800/touch.html" data-lang="en"
+                data-show-count="false">Tweet</a> </button>
+    </div>
+
+    <form>
+        <input type="button" value="Go back!" id="back" onclick = "window.history.back()">
+    </form>
+
+    <div id="navtitle">
+        <img id="trophy" src="image/Trophy.png">
+        <div id="lm">
+            Don't touch face game <br> Leaderboard
+        </div>
+    </div>
+
+    <div id="lt" class="container">
+        <div id="blank"></div>
+        <table class="table table-condensed sections">
+            <thead>
+                <tr id="fs">
+                    <th>Rank</th>
+                    <th>User email</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="one">
+                </tr>
+                <tr id="two">
+                </tr>
+                <tr id="three">
+                </tr>
+                <tr id="four">
+                </tr>
+                <tr id="five">
+                </tr>
+                <tr id="six">
+                </tr>
+                <tr id="seven">
+                </tr>
+                <tr id="eight">
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="scripts/firebase_api_brennen.js"></script>
+<script src="scripts/touch.js"></script>
+
+</html>

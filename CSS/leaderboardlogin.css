@@ -1,0 +1,74 @@
+.boards {
+    margin-top: 35%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "#blitz2 #jogger2"
+    "#tprace2 #tfgame2"
+    "#ccld2 #dogfight2";
+}
+
+#jogger2,
+#dogfight2,
+#tprace2,
+#tfgame2,
+#ccld2,
+#blitz2 {
+    background-image: url('../img/orange.jpg');
+    text-align: center;
+    font-family: 'Jura', sans-serif;
+    border-radius: 5px;
+    color: white;
+    font-size: 25px;
+    margin: 5%;
+}
+
+#blitz2 {
+    background-image: url('../img/back.jpg');
+}
+
+#menu2 {
+    background-image: url('../img/blue.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+@media (max-width: 500px) {
+    .boards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "jogger2" 
+        "dogfight2"
+        "tprace2" 
+        "tfgame2"
+        "ccld2";
+        margin-top: 0%;
+    }
+
+    #jogger2,
+    #dogfight2,
+    #tprace2,
+    #tfgame2,
+    #ccld2,
+    #blitz2 {
+        font-size: large;
+        margin: 5%;
+    }
+
+    #playGame{
+        display: none;
+    }
+
+    #disable{
+        text-align: center;
+    }
+}
+
+@media (min-width: 501px) {
+    #disable{
+        display: none;
+    }
+}
