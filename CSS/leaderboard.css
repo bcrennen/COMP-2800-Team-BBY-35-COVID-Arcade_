@@ -114,10 +114,10 @@
     left: 80%;
 }
 
-#jogger, #dogfight, #tprace, #tfgame, #ccld {
+#jogger, #dogfight, #tprace, #tfgame, #ccld, #blitz {
     width: 500px;
     height: 300px;
-    background-image: url('../img/back.jpg');
+    background-image: url('../img/orange.jpg');
     text-align: center;
     font-family: 'Jura', sans-serif;
     border-radius: 10px;
@@ -126,6 +126,11 @@
     text-decoration: none;
     margin-left: auto;
     margin-right: auto;
+}
+
+#blitz {
+    background-image: url('../img/back.jpg');
+    color: white;
 }
 
 .boards2 {
@@ -285,14 +290,19 @@ main {
         background: none;
     }
 
-    #jogger, #dogfight, #tprace, #tfgame, #ccld {
-        background-image: url('../img/back.jpg');
+    #jogger, #dogfight, #tprace, #tfgame, #ccld, #blitz {
+        background-image: url('../img/orange.jpg');
         text-align: center;
         font-family: 'Jura', sans-serif;
         border-radius: 5px;
         color: white;
         text-decoration: none;
         width: 116%;
+    }
+
+    #blitz {
+        background-image: url('../img/back.jpg');
+        color: white;
     }
     
     .boards2 {

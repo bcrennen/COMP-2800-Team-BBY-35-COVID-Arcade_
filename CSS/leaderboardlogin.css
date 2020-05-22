@@ -3,23 +3,28 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
-    "jogger2 dogfight2"
-    "tprace2 tfgame2"
-    "ccld2";
+    "#blitz2 #jogger2"
+    "#tprace2 #tfgame2"
+    "#ccld2 #dogfight2";
 }
 
 #jogger2,
 #dogfight2,
 #tprace2,
 #tfgame2,
-#ccld2 {
-    background-image: url('../img/back.jpg');
+#ccld2,
+#blitz2 {
+    background-image: url('../img/orange.jpg');
     text-align: center;
     font-family: 'Jura', sans-serif;
     border-radius: 5px;
     color: white;
-    font-size: 40px;
+    font-size: 25px;
     margin: 5%;
+}
+
+#blitz2 {
+    background-image: url('../img/back.jpg');
 }
 
 #menu2 {
@@ -47,7 +52,8 @@
     #dogfight2,
     #tprace2,
     #tfgame2,
-    #ccld2 {
+    #ccld2,
+    #blitz2 {
         font-size: large;
         margin: 5%;
     }
